@@ -44,11 +44,13 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'rest_auth',
     'knox',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -136,3 +138,9 @@ REST_FRAMEWORK = {
     #   'rest_framework.permissions.AllowAny'
     # ),
 }
+
+
+CORS_ORIGIN_WHITELIST = (
+    'https://localhost:3000',
+    'https://localhost:8000',
+)

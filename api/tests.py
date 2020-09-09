@@ -11,7 +11,7 @@ class AuthTests(TestCase):
     @classmethod
     def setUpTestData(cls):
         testuser1 = User.objects.create_user(
-            email="hjordan@gmail.com", password="dccomics")
+            email="hjordan@gmail.com", password="abc")
         testuser1.save()
 
         test_profile = Profile.objects.create(
